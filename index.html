@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moris Dakar | Cinematographer & Content Creator</title>
+    <meta name="description" content="Moris Dakar is a cinematographer and content creator working across documentaries, event coverage, live streaming, advertising, sports videography, YouTube content, and brand films in Dubai and the UAE.">
+    <meta name="keywords" content="Moris Dakar, MORIS DAKAR, cinematographer Dubai, content creator UAE, video production Dubai, event videographer UAE, documentary filmmaker, live streaming Dubai, sports videography, YouTube content creator">
+    <meta property="og:title" content="Moris Dakar | Cinematographer & Content Creator">
+    <meta property="og:description" content="Documentary films, event coverage, live streaming, advertising, sports videography, YouTube content, and cinematic video production.">
+    <meta property="og:image" content="image/Profile.jpg">
+    <meta property="og:url" content="https://morisdakar.com">
+    <meta property="og:type" content="website">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+
+        @font-face {
+            font-family: "Open Sans";
+            src: url("font/OpenSans-Regular.ttf") format("truetype"),
+                 url("font/Open Sans Regular.ttf") format("truetype"),
+                 url("OpenSans-Regular.ttf") format("truetype"),
+                 url("Open Sans Regular.ttf") format("truetype");
+            font-weight: 400;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: "Open Sans";
+            src: url("font/OpenSans-Light.ttf") format("truetype"),
+                 url("font/Open Sans Light.ttf") format("truetype"),
+                 url("OpenSans-Light.ttf") format("truetype"),
+                 url("Open Sans Light.ttf") format("truetype");
+            font-weight: 300;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: "Open Sans";
+            src: url("font/OpenSans-Bold.ttf") format("truetype"),
+                 url("font/Open Sans Bold.ttf") format("truetype"),
+                 url("OpenSans-Bold.ttf") format("truetype"),
+                 url("Open Sans Bold.ttf") format("truetype");
+            font-weight: 700;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        :root {
+            --font-1: "Open Sans", Arial, sans-serif;
+            --font-2: "Open Sans", Arial, sans-serif;
+        }
+
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        a,
+        button,
+        span {
+            font-family: "Open Sans", Arial, sans-serif !important;
+            font-style: normal !important;
+        }
+
+        .fa,
+        .fa-classic,
+        .fa-sharp,
+        .fas,
+        .fa-solid,
+        .far,
+        .fa-regular {
+            font-family: "Font Awesome 6 Free" !important;
+        }
+
+        .fab,
+        .fa-brands {
+            font-family: "Font Awesome 6 Brands" !important;
+        }
+
+        .hero-logo {
+            position: absolute;
+            top: clamp(2rem, 5vw, 4.5rem);
+            left: 50%;
+            transform: translateX(-50%);
+            width: clamp(190px, 18vw, 270px);
+            max-width: 58vw;
+            height: auto;
+            z-index: 3;
+            filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.65));
+        }
+
+        .hero-section {
+            min-height: 100vh;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero-title {
+            text-transform: uppercase;
+            max-width: 1000px;
+            color: #ffffff;
+            font-weight: 700;
+            letter-spacing: 0.015em;
+            font-size: clamp(58px, 8vw, 128px);
+            margin-bottom: 1rem;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(20px, 2.4vw, 38px);
+            color: #ffffff;
+            letter-spacing: 0.055em;
+            font-weight: 300;
+            line-height: 1.25;
+            text-transform: uppercase;
+        }
+
+        .portfolio-card {
+            background-color: rgba(9, 25, 27, 0.72);
+            border: 1px solid rgba(62, 152, 140, 0.28);
+            min-height: 100%;
+            transition: all 0.35s ease;
+        }
+
+        .portfolio-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--accent-color);
+        }
+
+        .portfolio-thumb {
+            min-height: 300px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .portfolio-thumb::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0.05), rgba(9, 25, 27, 0.82));
+        }
+
+        .portfolio-thumb {
+            display: block;
+            color: inherit;
+        }
+
+        .portfolio-thumb:hover {
+            color: inherit;
+        }
+
+        .portfolio-play {
+            position: absolute;
+            z-index: 2;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 58px;
+            height: 58px;
+            border: 2px solid rgba(255, 255, 255, 0.92);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            background: rgba(0, 0, 0, 0.35);
+            transition: all 0.25s ease;
+        }
+
+        .portfolio-thumb:hover .portfolio-play {
+            background: var(--accent-color);
+            border-color: var(--accent-color);
+            transform: translate(-50%, -50%) scale(1.08);
+        }
+
+        .portfolio-number {
+            font-size: 0.85rem;
+            letter-spacing: 2px;
+            color: var(--accent-color);
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .portfolio-meta {
+            color: rgba(255, 255, 255, 0.72);
+            font-size: 0.95rem;
+        }
+
+        .stat-box {
+            border: 1px solid rgba(62, 152, 140, 0.35);
+            padding: 2rem;
+            min-height: 100%;
+            background-color: rgba(40, 40, 40, 0.55);
+        }
+
+        .contact-footer {
+            background-color: var(--dark-bg);
+            border-top: 1px solid rgba(255, 255, 255, 0.25);
+        }
+
+        .contact-link {
+            color: white;
+            font-weight: 700;
+        }
+
+        .contact-link:hover {
+            color: var(--accent-color);
+        }
+
+        .footer-logo {
+            width: clamp(160px, 16vw, 260px);
+            height: auto;
+        }
+
+        .copyright-line {
+            color: rgba(255, 255, 255, 0.82);
+            font-size: 0.9rem;
+            letter-spacing: 0.08em;
+            font-weight: 700;
+        }
+
+
+        .about-photo-wrap {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .about-photo {
+            width: min(100%, 520px);
+            max-height: 620px;
+            object-fit: cover;
+            object-position: center;
+            filter: grayscale(100%);
+        }
+
+        @media only screen and (max-width: 993px) {
+            .about-photo {
+                width: min(100%, 420px);
+                max-height: 520px;
+            }
+        }
+
+        @media only screen and (max-width: 993px) {
+            .hero-section {
+                min-height: 92vh;
+            }
+
+            .hero-title {
+                font-size: clamp(48px, 14vw, 82px);
+            }
+
+            .hero-subtitle {
+                font-size: clamp(17px, 5vw, 26px);
+            }
+
+            .portfolio-thumb {
+                min-height: 220px;
+            }
+
+            .footer-logo {
+                margin-bottom: 1.5rem;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+<main class="text-white">
+        <!-- HERO -->
+        <section class="section hero-section position-relative d-flex align-items-center"
+            style="background-image: url(image/DSC_9570.jpg);">
+            <div class="image-overlay"></div>
+            <img src="image/logo.png" alt="Moris Dakar logo" class="hero-logo">
+            <div class="r-container position-relative w-100" style="z-index: 2;">
+                <div class="d-flex flex-column justify-content-center align-items-center text-center">
+                    <h1 class="font-1 lh-1 fw-bold hero-title">
+                        MORIS DAKAR
+                    </h1>
+                    <h3 class="font-1 hero-subtitle">
+                        VIDEO PRODUCTION<br>
+                        <span>MARKETING MANAGEMENT</span>
+                    </h3>
+                </div>
+            </div>
+        </section>
+
+        <!-- SHOWREEL -->
+        <section class="section">
+            <div class="r-container">
+                <div class="row row-cols-1 row-cols-lg-2 align-items-center">
+                    <div class="col col-lg-7 mb-4 mb-lg-0">
+                        <div class="shadow d-flex justify-content-center align-items-center video-container"
+                            style="background-image: url(image/Showreel-cover-photo.jpg);"
+                            data-url="https://www.youtube.com/embed/rSzPCR0jxM8?autoplay=1"
+                            data-title="Moris Dakar showreel">
+                            <div class="img-overlay"></div>
+                            <button class="bg-transparent shadow accent-color video-btn video-btn-small" aria-label="Play showreel">
+                                <i class="fa-solid fa-play" style="margin-left: 5px;"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col col-lg-5">
+                        <div class="d-flex flex-column ps-lg-4 gap-3">
+                            <h5 class="accent-color lh-1 ls-2 fw-bold font-1">SHOWREEL</h5>
+                            <h3 class="font-1 lh-1 fw-bold">Stories, brands, events, and real-world production.</h3>
+                            <p>
+                                My work spans documentary filmmaking, live event coverage, advertising, sports videography, YouTube content, and camera operation for creative teams and brands.
+                            </p>
+                            <div class="row row-cols-1 row-cols-md-3">
+                                <div class="col mb-3">
+                                    <div class="d-flex flex-column text-center stat-box">
+                                        <h3 class="accent-color font-1 fw-bold m-0">100+</h3>
+                                        <p class="font-1 m-0">Projects</p>
+                                    </div>
+                                </div>
+                                <div class="col mb-3">
+                                    <div class="d-flex flex-column text-center stat-box">
+                                        <h3 class="accent-color font-1 fw-bold m-0">75+</h3>
+                                        <p class="font-1 m-0">Clients</p>
+                                    </div>
+                                </div>
+                                <div class="col mb-3">
+                                    <div class="d-flex flex-column text-center stat-box">
+                                        <h3 class="accent-color font-1 fw-bold m-0">4</h3>
+                                        <p class="font-1 m-0">Years on The Old Poplar</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FEATURED PORTFOLIO -->
+        <section class="section bg-secondary-dark" id="portfolio">
+            <div class="r-container">
+                <div class="d-flex flex-column gap-5">
+                    <div>
+                        <h5 class="accent-color lh-1 ls-2 fw-bold font-1">PORTFOLIO</h5>
+                        <h3 class="font-1 lh-1 fw-bold">Selected Work</h3>
+                    </div>
+
+                    <div class="row row-cols-1 row-cols-lg-2 g-4">
+                        <div class="col">
+                            <article class="portfolio-card">
+                                <a class="portfolio-thumb" href="https://www.youtube.com/watch?v=zGrkJAVhNWA" target="_blank" rel="noopener noreferrer" aria-label="Watch The Old Poplar" style="background-image: url(image/soz.png);"><span class="portfolio-play"><i class="fa-solid fa-play"></i></span></a>
+                                <div class="p-4">
+                                    <span class="portfolio-number">Documentary</span>
+                                    <h3 class="font-1 lh-1 fw-bold">The Old Poplar</h3>
+                                    <p class="portfolio-meta">The first Syrian female bodybuilder</p>
+                                    <p>
+                                        A short documentary shot over the course of 4 years, following Souzan Hamdan as she wins first place in an international bodybuilding show after 5 years of trying and failing.
+                                    </p>
+                                </div>
+                            </article>
+                        </div>
+
+                        <div class="col">
+                            <article class="portfolio-card">
+                                <div class="portfolio-thumb" style="background-image: url(image/SMAEA.png);"></div>
+                                <div class="p-4">
+                                    <span class="portfolio-number">Event Coverage | Live Streaming</span>
+                                    <h3 class="font-1 lh-1 fw-bold">Sheikh Mansour Bin Zayed Agricultural Excellence Award</h3>
+                                    <p class="portfolio-meta">Videographer and DP with HOC Creative Team</p>
+                                    <p>
+                                        Daily video coverage, event live streaming, and live podcast streaming and recording for 4 months at Sheikh Zayed Festival.
+                                    </p>
+                                </div>
+                            </article>
+                        </div>
+
+                        <div class="col">
+                            <article class="portfolio-card">
+                                <a class="portfolio-thumb" href="https://www.youtube.com/watch?v=i3BlVit4k-8" target="_blank" rel="noopener noreferrer" aria-label="Watch CryptoFightNight 2024" style="background-image: url(image/ERIK.jpg);"><span class="portfolio-play"><i class="fa-solid fa-play"></i></span></a>
+                                <div class="p-4">
+                                    <span class="portfolio-number">Short Documentary</span>
+                                    <h3 class="font-1 lh-1 fw-bold">CryptoFightNight 2024</h3>
+                                    <p class="portfolio-meta">Boxing championship documentary | Dubai</p>
+                                    <p>
+                                        A short film documenting the final days before Erik Velie's heavyweight boxing championship fight, filmed over 5 days during the 2024 Dubai storm as a solo filmmaker.
+                                    </p>
+                                </div>
+                            </article>
+                        </div>
+
+                        <div class="col">
+                            <article class="portfolio-card">
+                                <a class="portfolio-thumb" href="https://www.instagram.com/p/C4YAvT7sbX5/" target="_blank" rel="noopener noreferrer" aria-label="Watch Vivo V30 Ramadan Ad" style="background-image: url(image/vivo.png);"><span class="portfolio-play"><i class="fa-solid fa-play"></i></span></a>
+                                <div class="p-4">
+                                    <span class="portfolio-number">Advertisement</span>
+                                    <h3 class="font-1 lh-1 fw-bold">Vivo V30 Ramadan Ad</h3>
+                                    <p class="portfolio-meta">Camera Operator and 1st AC with HOC Creative</p>
+                                    <p>
+                                        Camera operation and 1st AC work for Vivo's Ramadan 2024 campaign, Vivo V30, The Portrait Master.
+                                    </p>
+                                </div>
+                            </article>
+                        </div>
+
+                        <div class="col">
+                            <article class="portfolio-card">
+                                <a class="portfolio-thumb" href="https://www.youtube.com/watch?v=yTppao2hLPU" target="_blank" rel="noopener noreferrer" aria-label="Watch SQUATWOLF" style="background-image: url(image/sw.png);"><span class="portfolio-play"><i class="fa-solid fa-play"></i></span></a>
+                                <div class="p-4">
+                                    <span class="portfolio-number">Advertisement</span>
+                                    <h3 class="font-1 lh-1 fw-bold">SQUATWOLF</h3>
+                                    <p class="portfolio-meta">Premium gym wear brand from Dubai</p>
+                                    <p>
+                                        A full-day advertising production with a sponsored athlete for a premium gym wear brand from Dubai, with voice-over created using an AI generative tool.
+                                    </p>
+                                </div>
+                            </article>
+                        </div>
+
+                        <div class="col">
+                            <article class="portfolio-card">
+                                <a class="portfolio-thumb" href="https://www.youtube.com/watch?v=4MJkJ9mc7bA" target="_blank" rel="noopener noreferrer" aria-label="Watch Kareem and Christina" style="background-image: url(image/kc2.png);"><span class="portfolio-play"><i class="fa-solid fa-play"></i></span></a>
+                                <div class="p-4">
+                                    <span class="portfolio-number">Wedding Film</span>
+                                    <h3 class="font-1 lh-1 fw-bold">Kareem & Christina</h3>
+                                    <p class="portfolio-meta">Engagement and wedding video</p>
+                                    <p>
+                                        A wedding film shot across church and wedding hall locations, balancing family responsibility and event coverage in a highly personal production.
+                                    </p>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+
+                    <div class="d-flex flex-lg-row flex-column gap-lg-5 gap-3 py-3">
+                        <a href="https://www.youtube.com/@morisdakar" class="px-4 py-2 btn button accent-color button-outline rounded-0 fw-bold font-1 hover-transform">
+                            YouTube Channel
+                        </a>
+                        <a href="https://www.instagram.com/morisdakar" class="px-4 py-2 btn button accent-color button-outline rounded-0 fw-bold font-1 hover-transform">
+                            Instagram Account
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVICES -->
+        <section class="section position-relative bg-secondary-dark">
+            <div class="texture-overlay"></div>
+            <div class="r-container position-relative" style="z-index: 2;">
+                <div class="d-flex flex-column text-center gap-4">
+                    <h5 class="accent-color lh-1 ls-2 fw-bold font-1">SERVICES</h5>
+                    <h3 class="font-1 lh-1 fw-bold">What I Shoot</h3>
+
+                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 text-start w-100">
+                        <div class="col mb-4">
+                            <div class="d-flex flex-row gap-3">
+                                <span class="accent-color" style="font-size:3rem;"><i class="fa-solid fa-film"></i></span>
+                                <div>
+                                    <h5 class="font-1 fw-bold">DOCUMENTARY FILM PRODUCTION</h5>
+                                    <p>Real stories shaped with cinematic structure, character, and emotional direction.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col mb-4">
+                            <div class="d-flex flex-row gap-3">
+                                <span class="accent-color" style="font-size:3rem;"><i class="fa-solid fa-video"></i></span>
+                                <div>
+                                    <h5 class="font-1 fw-bold">EVENT VIDEOGRAPHY</h5>
+                                    <p>Event coverage, live streaming, broadcasting, gimbal operation, and camera operation.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col mb-4">
+                            <div class="d-flex flex-row gap-3">
+                                <span class="accent-color" style="font-size:3rem;"><i class="fas fa-ad"></i></span>
+                                <div>
+                                    <h5 class="font-1 fw-bold">ADVERTISING CAMPAIGNS</h5>
+                                    <p>Brand films and campaign videos built around a clear visual concept and production workflow.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col mb-4">
+                            <div class="d-flex flex-row gap-3">
+                                <span class="accent-color" style="font-size:3rem;"><i class="fa-solid fa-dumbbell"></i></span>
+                                <div>
+                                    <h5 class="font-1 fw-bold">SPORTS VIDEOGRAPHY</h5>
+                                    <p>Sports event coverage, athlete videos, boxing, bodybuilding, and performance-driven content.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col mb-4">
+                            <div class="d-flex flex-row gap-3">
+                                <span class="accent-color" style="font-size:3rem;"><i class="fa-solid fa-mobile"></i></span>
+                                <div>
+                                    <h5 class="font-1 fw-bold">SHORT-FORM CONTENT</h5>
+                                    <p>Vertical videos for Instagram, TikTok, YouTube Shorts, and social media campaigns.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col mb-4">
+                            <div class="d-flex flex-row gap-3">
+                                <span class="accent-color" style="font-size:3rem;"><i class="fa-solid fa-play"></i></span>
+                                <div>
+                                    <h5 class="font-1 fw-bold">YOUTUBE VIDEOS</h5>
+                                    <p>Filmmaking, behind the scenes, gear reviews, production breakdowns, and educational content.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col mb-4">
+                            <div class="d-flex flex-row gap-3">
+                                <span class="accent-color" style="font-size:3rem;"><i class="fa-solid fa-microphone"></i></span>
+                                <div>
+                                    <h5 class="font-1 fw-bold">LIVE PODCASTS</h5>
+                                    <p>Live podcast streaming, recording, multi-camera workflows, and production support.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col mb-4">
+                            <div class="d-flex flex-row gap-3">
+                                <span class="accent-color" style="font-size:3rem;"><i class="fa-solid fa-user"></i></span>
+                                <div>
+                                    <h5 class="font-1 fw-bold">INTERVIEWS</h5>
+                                    <p>Founder interviews, documentary interviews, expert content, and polished talking-head videos.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- YOUTUBE AND AWARDS -->
+        <section class="section">
+            <div class="r-container">
+                <div class="row row-cols-1 row-cols-lg-2 g-4">
+                    <div class="col">
+                        <div class="portfolio-card p-4 h-100">
+                            <h5 class="accent-color lh-1 ls-2 fw-bold font-1">YOUTUBE CHANNEL</h5>
+                            <h3 class="font-1 lh-1 fw-bold">Filmmaking, production, and camera gear reviews.</h3>
+                            <p>
+                                A channel focused on cinematography, video production, behind the scenes work, camera gear reviews, and practical filmmaking education for real-life shooting scenarios.
+                            </p>
+                            <a href="https://www.youtube.com/@morisdakar" class="px-4 py-2 btn button accent-color button-outline rounded-0 fw-bold font-1 hover-transform">
+                                Watch on YouTube
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="portfolio-card p-4 h-100">
+                            <h5 class="accent-color lh-1 ls-2 fw-bold font-1">35AWARDS</h5>
+                            <h3 class="font-1 lh-1 fw-bold">10th 35AWARDS International Photography Award</h3>
+                            <p>
+                                Night Landscape Photography Award recognition: Top 150 worldwide, Top 10 Dubai, and Top 35 UAE photographers.
+                            </p>
+                            <div class="row row-cols-1 row-cols-md-3 text-center">
+                                <div class="col mb-3">
+                                    <h4 class="accent-color font-1 fw-bold m-0">Top 150</h4>
+                                    <p class="m-0">Worldwide</p>
+                                </div>
+                                <div class="col mb-3">
+                                    <h4 class="accent-color font-1 fw-bold m-0">Top 10</h4>
+                                    <p class="m-0">Dubai</p>
+                                </div>
+                                <div class="col mb-3">
+                                    <h4 class="accent-color font-1 fw-bold m-0">Top 35</h4>
+                                    <p class="m-0">UAE</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section class="section bg-secondary-dark">
+            <div class="r-container">
+                <div class="row row-cols-1 row-cols-lg-2 align-items-center">
+                    <div class="col col-lg-6 mb-4 mb-lg-0">
+                        <div class="d-flex flex-column gap-3">
+                            <h5 class="accent-color lh-1 ls-2 fw-bold font-1">ABOUT</h5>
+                            <h3 class="font-1 lh-1 fw-bold">Cinematographer, content creator, and real-world production operator.</h3>
+                            <p>
+                                MORIS DAKAR works across documentary filmmaking, event video production, live streaming, brand content, sports videography, YouTube production, and behind the scenes educational content.
+                            </p>
+                            <p>
+                                His portfolio includes The Old Poplar, CryptoFightNight 2024, Sheikh Mansour Bin Zayed Agricultural Excellence Award coverage with HOC Creative, Vivo V30 Ramadan campaign work, SQUATWOLF advertising, sports events, weddings, and YouTube filmmaking content.
+                            </p>
+                            <div>
+                                <h5 class="accent-color font-2 m-0">MORIS DAKAR</h5>
+                                <span>Cinematographer | Content Creator</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col col-lg-6">
+                        <div class="about-photo-wrap">
+                            <img src="image/Profile.jpg" alt="MORIS DAKAR operating a camera" class="img-fluid about-photo">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- CONTACT / FOOTER -->
+        <section class="section position-relative contact-footer">
+            <div class="r-container">
+                <div class="d-flex flex-column gap-4 text-center">
+                    <h5 class="accent-color lh-1 ls-2 fw-bold font-1">CONTACT</h5>
+                    <h3 class="font-1 lh-1 fw-bold">Let’s bring your project to life.</h3>
+                    <p class="mx-auto" style="max-width: 780px;">
+                        For documentaries, event coverage, live streaming, advertising, sports videos, YouTube content, or interviews, contact me directly.
+                    </p>
+
+                    <div class="row row-cols-1 row-cols-lg-3 text-start justify-content-center">
+                        <div class="col mb-3">
+                            <div class="portfolio-card p-4 h-100">
+                                <i class="fa-solid fa-envelope accent-color mb-3"></i>
+                                <h5 class="font-1 fw-bold">Email</h5>
+                                <a class="contact-link" href="mailto:info@morisdakar.com">info@morisdakar.com</a>
+                            </div>
+                        </div>
+
+                        <div class="col mb-3">
+                            <div class="portfolio-card p-4 h-100">
+                                <i class="fa-brands fa-instagram accent-color mb-3"></i>
+                                <h5 class="font-1 fw-bold">Instagram</h5>
+                                <a class="contact-link" href="https://www.instagram.com/morisdakar">@morisdakar</a>
+                            </div>
+                        </div>
+
+                        <div class="col mb-3">
+                            <div class="portfolio-card p-4 h-100">
+                                <i class="fa-brands fa-youtube accent-color mb-3"></i>
+                                <h5 class="font-1 fw-bold">YouTube</h5>
+                                <a class="contact-link" href="https://www.youtube.com/@morisdakar">@morisdakar</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="d-flex flex-lg-row flex-column text-center gap-3 justify-content-between align-items-center pt-5 mt-4">
+                        <div>
+                            <img src="image/logo.png" alt="Moris Dakar logo" class="img-fluid footer-logo">
+                        </div>
+                        <span class="copyright-line">
+                            COPYRIGHT 2026 © MORIS DAKAR
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/vendor/jquery.min.js"></script>
+    <script src="js/vendor/bootstrap.bundle.min.js"></script>
+    <script src="js/vendor/swiper-bundle.min.js"></script>
+    <script src="js/vendor/isotope.pkgd.min.js"></script>
+    <script src="js/vendor/fslightbox.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/swiper-script.js"></script>
+    <script src="js/video_embedded.js"></script>
+    <script src="js/masonry.js"></script>
+</body>
+
+</html>
