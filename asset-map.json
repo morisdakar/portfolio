@@ -1,0 +1,79 @@
+[
+  {
+    "element": "brand-logo",
+    "file": "assets/images/brand-logo.png"
+  },
+  {
+    "element": "hero-image",
+    "file": "assets/images/hero-image.jpg"
+  },
+  {
+    "element": "showreel-image",
+    "file": "assets/images/showreel-image.jpg"
+  },
+  {
+    "element": "project-sony-mea-image",
+    "file": "assets/images/project-sony-mea-image.jpg"
+  },
+  {
+    "element": "project-sony-alpha-image",
+    "file": "assets/images/project-sony-alpha-image.jpg"
+  },
+  {
+    "element": "project-sheikh-image",
+    "file": "assets/images/project-sheikh-award.png",
+    "reference": "portfolio-main 2/image/SMAEA.png"
+  },
+  {
+    "element": "project-old-poplar-image",
+    "file": "assets/images/project-old-poplar-image.png"
+  },
+  {
+    "element": "project-crypto-image",
+    "file": "assets/images/project-crypto-image.png"
+  },
+  {
+    "element": "project-extreme-image",
+    "file": "assets/images/project-extreme-image.jpg"
+  },
+  {
+    "element": "project-wedding-films-image",
+    "file": "assets/images/project-wedding-recap-image.png"
+  },
+  {
+    "element": "project-wedding-recap-image",
+    "file": "assets/images/project-wedding-films-image.png"
+  },
+  {
+    "element": "project-vivo-image",
+    "file": "assets/images/project-vivo-image.png"
+  },
+  {
+    "element": "project-squatwolf-image",
+    "file": "assets/images/project-squatwolf-image.png"
+  },
+  {
+    "element": "about-image",
+    "file": "assets/images/about-camera-operator.png"
+  },
+  {
+    "element": "le-ciel-image",
+    "file": "assets/images/le-ciel-thumbnail.png"
+  },
+  {
+    "element": "sa7ten-image",
+    "file": "assets/images/sa7ten-thumbnail.png"
+  },
+  {
+    "element": "project-christmas-image",
+    "file": "assets/images/project-christmas-image.png"
+  },
+  {
+    "element": "project-loreal-image",
+    "file": "assets/images/loreal-event-hall.png"
+  },
+  {
+    "element": "project-burger-wings-image",
+    "file": "assets/images/project-burger-wings-image.png"
+  }
+]
